@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.head {
+    text-align: center;
+}
+
+.btn:focus {
+    color: #fff;
+    background-color: #6c757d;
+}
+.pressed {
+    color: #fff;
+    background-color: #6c757d;
+}
+
+.my-time {
+    display: flex;
+    align-items: center;
+}
+
+.my-time input {
+    max-width: 80px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #ece2e2;
+}
+
+.item-boat {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+
+
