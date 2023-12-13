@@ -1,7 +1,8 @@
 const btns = document.querySelector('body')
-const minutesTime = +document.querySelector('.minute').value // инпут с минутами
-const secondsTime = +document.querySelector('.second').value // инпут с секунды
-const miliSecondsTime = +document.querySelector('.milisecond').value // инпут с милисекунды
+// const minutesTime = +document.querySelector('.minute').value // инпут с минутами
+// const secondsTime = +document.querySelector('.second').value // инпут с секунды
+// const miliSecondsTime = +document.querySelector('.milisecond').value // инпут с милисекунды
+const inputAll = document.querySelectorAll('input') // все инпуты
 const yourModel = document.querySelector('.model') // полученная модель
 const bestTime = document.querySelector('.best-time') // лучшее время
 let finish = 0
@@ -14,7 +15,6 @@ btns.addEventListener('click', (e) => {
         time = e.target.getAttribute('data-time')
         string = e.target.textContent
         timeEnd(time, string)
-        
     }
 })
 // переводит секунды в минуты
@@ -27,7 +27,6 @@ function timeEnd(num, str) {
     if (num < 360) {
         seconds = num - 300
     }
-    
     let second = seconds.toFixed(2)
     if (second < 10) {
         second = '0' + second
@@ -39,7 +38,7 @@ function timeEnd(num, str) {
 }
 
 
-document.querySelectorAll('input').forEach(input => {
+inputAll.forEach(input => {
     input.addEventListener('input', () => {
         const min = +document.querySelector('.minute').value;
         const sec = +document.querySelector('.second').value;
